@@ -74,11 +74,7 @@ function initGame(){
 
 //huPlayer clicking on square
 async function playerClick(click){
-  console.log(thinking);
-  if (determineTie() && !thinking){
-    endGame("tie");
-  }
-  else if(!thinking){
+  if(!thinking){
     writeSquare(click.target.id, huPlayer)
     think(true);
     chat(getRandomChat());
@@ -91,7 +87,7 @@ async function playerClick(click){
 //Write on square
 function writeSquare(squareID, player){
   square = document.getElementById(squareID);
-  if (square.className == "box selectable"){ //if square is active
+  if (square && square.className == "box selectable"){ //if square is active
     //console.log("writing ",player," to ",square);
     square.innerHTML = player;
     square.className = "box";
@@ -100,6 +96,7 @@ function writeSquare(squareID, player){
     let gameWon = determineWin(currentBoard, player);
     if (gameWon) endGame(player);
   }
+  else if (determineTie()) endGame("tie");
 } 
 
 function updateCurrentBoard(){
