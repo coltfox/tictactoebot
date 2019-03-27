@@ -74,6 +74,7 @@ function initGame(){
 
 //huPlayer clicking on square
 async function playerClick(click){
+  console.log(thinking);
   if (determineTie() && !thinking){
     endGame("tie");
   }
@@ -158,7 +159,9 @@ async function endGame(winner){
   if (winner == "X") (winMsg = "Bot won!");
   else if (winner == "O") (winMsg = "You won!");
   else if (winner == "tie") (winMsg = "It's a tie!");
+  thinking = true;
   await sleep(1000);
+  thinking = false;
   for (var i = 0; i<squares.length; i++){ // loop through each box, reset them
     squares[i].className = "box endgame";
   }
