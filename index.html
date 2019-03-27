@@ -1,0 +1,46 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Impossible Tic Tac Toe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="board.css" />
+</head>
+<body>
+    <header>Unbeatable Tic Tac Toe Artifical Intelligence</header>
+    <table id="table">
+		<tr id="A">
+			<td class="box selectable" id="0"></td>
+			<td class="box selectable" id="1"></td>
+			<td class="box selectable" id="2"></td>
+		</tr>
+		<tr id="B">
+			<td class="box selectable" id="3"></td>
+			<td class="box selectable" id="4"></td>
+			<td class="box selectable" id="5"></td>
+		</tr>
+		<tr id="C">
+			<td class="box selectable" id="6"></td>
+			<td class="box selectable" id="7"></td>
+			<td class="box selectable" id="8"></td>
+		</tr>
+    </table>
+	<p id="winText"></p>
+	<script src ="utilities.js"></script>
+	<script src ="script.js"></script>
+</body>
+<aside>
+	<!--<img id="robot" src="robot-svgrepo-com.svg">-->
+	<img id="robotdefault" class="robot" src="animation stuff/robotdefault.gif">
+	<img id="robotthinking" class="robot endgame" src="animation stuff/thinking.gif">
+	<div id="chat-div">
+		<img id="chat-bubble" src="message.svg">
+		<p id="chat-text"></p>	
+	</div>
+</aside>
+<footer>
+    <button onclick="initGame();" id="playAgain">Play Again</button>
+</footer>
+</html>

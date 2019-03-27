@@ -1,0 +1,72 @@
+body {
+    background-color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.robot{
+    position: absolute;
+    float: left;
+    height: 20vh;
+    width: 10vh;
+    margin-top: 16vh;
+    margin-left: 9.85vh;
+}
+
+#chat-bubble{
+    height: 15vh;
+    width: 20%;
+    margin-left: 13vh;
+    margin-top: 5vh;
+}
+
+#chat-text{
+    width: 25vh;
+    position: absolute;
+    margin-left: 21.5vh;
+    font-size: 1.5vh;
+    top: 17vh;
+}
+
+#winText {
+    position: absolute;
+    color: rgb(13, 211, 99);
+    font-size: 15vh;
+    margin-left: 30%;
+}
+
+header {
+    color: #333;
+    height: 10vh;
+    line-height: 10vh;
+    text-align: center;
+    font-size: 5vh;
+    margin-left: -5%;
+}
+
+#boardImg {
+    display: table;
+    margin: 0 auto;
+    width: 70%;
+    height: 70%;
+    margin-top: 4%;
+    z-index: 1;
+}
+
+#playAgain {
+    position: absolute;
+    bottom: 5%;
+    width: 15%;
+    height: 10%;
+    background-color: rgb(13, 211, 99);
+    border-color: rgb(13, 211, 99);
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    font-size: 3vh;
+    display: table;
+    margin-left: 39.7%;
+    margin-top: 34%;
+}
+
+#playAgain:hover {
+    background-color: rgb(12, 184, 87);
+}
